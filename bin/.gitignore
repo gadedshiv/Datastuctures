@@ -1,9 +1,1 @@
-/InsertNodeToLinkedList$SinglyLinkedList.class
-/InsertNodeToLinkedList$SinglyLinkedListNode.class
-/InsertNodeToLinkedList.class
-/TraverseLinkedList$SinglyLinkedList.class
-/TraverseLinkedList$SinglyLinkedListNode.class
-/TraverseLinkedList.class
-/InsertNodeToHeadLinkedList.class
-/InsertNodeToHeadLinkedList$SinglyLinkedList.class
-/InsertNodeToHeadLinkedList$SinglyLinkedListNode.class
+*.class
