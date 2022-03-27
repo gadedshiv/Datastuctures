@@ -13,9 +13,11 @@ public class LinkedListDemo {
 	
 	static class LinkedList{
 		LinkedListNode head;
+		LinkedListNode tail;
 		
 		public LinkedList(){
 			this.head=null;
+			this.tail=null;
 		}
 	}
 	
@@ -32,6 +34,28 @@ public class LinkedListDemo {
 		currNode.next=newNode;
 		System.out.println("Insert done");
 		return head;
+	}
+	
+	public static LinkedListNode deleteNode(LinkedListNode llist,int position) {
+		int counter=0;
+		
+		LinkedListNode currNode = llist;
+        
+        if (position == 0) {
+        	 llist = llist.next;
+            return llist;
+        }
+        
+        while (counter < position - 1) {
+            currNode = currNode.next;
+            counter++;
+        }
+        
+        if (currNode.next != null && currNode.next.next != null) {
+            currNode.next = currNode.next.next;
+        }
+        
+		return llist;
 	}
 	
 	public static void printtNodeFromLinkedList(LinkedListNode head) {
@@ -60,6 +84,13 @@ public class LinkedListDemo {
 		obj.head=node3;
 		System.out.println("added");
 		printtNodeFromLinkedList(obj.head);
+		
+		System.out.println("After Delete");
+		obj.head=deleteNode(obj.head,2);
+		
+		printtNodeFromLinkedList(obj.head);
+		
+		
 
 	}
 

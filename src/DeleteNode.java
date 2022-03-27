@@ -56,7 +56,7 @@ class SinglyLinkedListPrintHelper {
     }
 }
 
-class Result {
+class Result3 {
 
     /*
      * Complete the 'deleteNode' function below.
@@ -123,7 +123,7 @@ public class DeleteNode {
 
         int position = Integer.parseInt(bufferedReader.readLine().trim());
 
-        SinglyLinkedListNode llist1 = Result.deleteNode(llist.head, position);
+        SinglyLinkedListNode llist1 = Result3.deleteNode(llist.head, position);
 
         SinglyLinkedListPrintHelper.printList(llist1, " ", bufferedWriter);
         bufferedWriter.newLine();
