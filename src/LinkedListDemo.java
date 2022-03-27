@@ -58,6 +58,28 @@ public class LinkedListDemo {
 		return llist;
 	}
 	
+	public static LinkedListNode insertNodetoPosition(LinkedListNode llist,int position,int data) {
+		int counter=0;
+		
+		LinkedListNode newNode=new LinkedListNode(data);
+		LinkedListNode currNode = llist;
+        
+        if (position == 0) {
+        	newNode.next = llist;
+            return newNode;
+        }
+        
+        while (counter < position - 1) {
+            currNode = currNode.next;
+            counter++;
+        }
+        
+        newNode.next=currNode.next;
+        currNode.next=newNode;
+        
+		return llist;
+	}
+	
 	public static void printtNodeFromLinkedList(LinkedListNode head) {
 		
 		System.out.println(head.data);
@@ -89,6 +111,12 @@ public class LinkedListDemo {
 		obj.head=deleteNode(obj.head,2);
 		
 		printtNodeFromLinkedList(obj.head);
+		
+		System.out.println("After Insert");
+		obj.head=insertNodetoPosition(obj.head,2,21);
+		
+		printtNodeFromLinkedList(obj.head);
+		
 		
 		
 
